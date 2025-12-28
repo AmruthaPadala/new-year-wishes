@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Gift 🎁</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="giftPage">
+
+  <h1 class="giftTitle">Pick a Gift Just for You 💖🎁</h1>
+
+  <div class="giftContainer">
+    <div class="giftBox" onclick="openGift('kitkat')">🎁</div>
+<div class="giftBox" onclick="openGift('dairymilk')">🎁</div>
+<div class="giftBox" onclick="openGift('icecream')">🎁</div>
+
+
+  </div>
+
+  <div id="giftResult" class="giftResult"></div>
+
+  <!-- Falling elements -->
+  <div class="fall" style="left:10%;">🍫</div>
+  <div class="fall" style="left:30%;">🎀</div>
+  <div class="fall" style="left:50%;">💖</div>
+  <div class="fall" style="left:70%;">✨</div>
+  <div class="fall" style="left:90%;">🍬</div>
+
+  <script>
+  function openGift(gift) {
+document.querySelectorAll('.giftBox').forEach(box => {
+  box.style.pointerEvents = 'none';
+});
+
+    const result = document.getElementById("giftResult");
+
+    let giftName = "";
+    let message = "";
+
+    if (gift === "kitkat") {
+      giftName = "🫶 KitKat";
+      message = "May 2026 give you the sweetest breaks and happiest moments — just like KitKat 🍫✨";
+    } 
+    else if (gift === "dairymilk") {
+      giftName = "🌱 Dairy Milk";
+      message = "May your 2026 be smooth, rich, and full of sweet surprises like Dairy Milk 💜🍫";
+    } 
+    else if (gift === "icecream") {
+      giftName = "✨ Ice Cream";
+      message = "May 2026 be cool, colorful, and filled with joy — just like your favorite Ice Cream 🍦🌈";
+    }
+
+    result.innerHTML = `
+      <h2>Yayyy! 🎉</h2>
+      <p>You got <strong>${giftName}</strong> 💝</p>
+      <p>${message}</p>
+      <p class="signature">— With love, Ammuuu 💖</p>
+    `;
+
+    result.classList.add("show");
+  }
+</script>
+
+    
+
+</body>
+</html>

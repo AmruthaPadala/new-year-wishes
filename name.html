@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enter Your Name 🎉</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="namePage">
+
+  <h1 class="typing">What’s your name? 💖</h1>
+  <p class="helperText">Don’t worry, your name is safe 😄✨</p>
+
+  <input type="text" id="name" placeholder="Enter your name">
+  <br>
+  <button class="glowBtn" onclick="goNext()">
+  Continue
+</button>
+<script>
+  function goNext() {
+    const name = document.getElementById('name').value.trim();
+    if (name === "") {
+      alert("Heyy 😄 please enter your name 💖");
+    } else {
+      location.href = 'wish.html?name=' + encodeURIComponent(name);
+    }
+  }
+</script>
+
+  <!-- Falling aesthetic elements -->
+  <div class="fall" style="left:5%;">🎀</div>
+  <div class="fall" style="left:15%;">🍫</div>
+  <div class="fall" style="left:25%;">💖</div>
+  <div class="fall" style="left:35%;">✨</div>
+  <div class="fall" style="left:45%;">🍫</div>
+  <div class="fall" style="left:55%;">🎀</div>
+  <div class="fall" style="left:65%;">💖</div>
+  <div class="fall" style="left:75%;">✨</div>
+  <div class="fall" style="left:85%;">🍫</div>
+  <div class="fall" style="left:95%;">🎀</div>
+  <div class="fall" style="right:5%;">🎀</div>
+  <div class="fall" style="right:15%;">🍫</div>
+  <div class="fall" style="right:25%;">💖</div>
+  <div class="fall" style="right:35%;">✨</div>
+  <div class="fall" style="right:45%;">🍫</div>
+  <div class="fall" style="right:55%;">🎀</div>
+  <div class="fall" style="right:65%;">💖</div>
+  <div class="fall" style="right:75%;">✨</div>
+  <div class="fall" style="right:85%;">🍫</div>
+  <div class="fall" style="right:95%;">🎀</div>
+
+
+</body>
+</html>
+

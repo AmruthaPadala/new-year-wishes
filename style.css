@@ -1,0 +1,540 @@
+body {
+  background: linear-gradient(120deg, #1a2a6c, #b21f1f, #fdbb2d);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.screen {
+  display: none;
+  margin-top: 15%;
+}
+
+.active {
+  display: block;
+}
+
+button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 20px;
+  background: gold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.gifts {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.gift {
+  font-size: 60px;
+  cursor: pointer;
+}
+.gift:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+.confetti {
+  font-size: 30px;
+  animation: fall 1s infinite alternate;
+}
+
+@keyframes fall {
+  from { transform: translateY(0); }
+  to { transform: translateY(15px); }
+}
+/* ----------------- Welcome Page ----------------- */
+.welcome {
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb, #fbc2eb, #a6c0fe);
+  background-size: 400% 400%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: gradientBG 12s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position:0% 50%; }
+  50% { background-position:100% 50%; }
+  100% { background-position:0% 50%; }
+}
+
+/* Typing animated text with gradient color */
+.typing {
+  font-size: 2em;
+  max-width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  
+  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #00f260, #0575e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+/* Glowing button */
+.glowBtn {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 25px;
+  background: gold;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 30px;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 10px gold; }
+  100% { box-shadow: 0 0 25px orange; }
+}
+
+/* Fireworks emojis */
+.fireworks {
+  font-size: 2.5em;
+  margin-top: 20px;
+  animation: fireworksMove 2s infinite alternate;
+  position: absolute;
+}
+
+/* Multiple fireworks positions */
+.fireworks:nth-child(1) { left: 10%; animation-delay: 0s; }
+.fireworks:nth-child(2) { left: 50%; animation-delay: 0.5s; }
+.fireworks:nth-child(3) { left: 80%; animation-delay: 1s; }
+
+@keyframes fireworksMove {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(20deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* Confetti sparkles */
+.confetti {
+  position: absolute;
+  font-size: 1.5em;
+  animation: confettiFall linear infinite;
+}
+
+@keyframes confettiFall {
+  0% { transform: translateY(-50px) rotate(0deg); opacity:1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity:0; }
+}
+
+.pop {
+  font-size: 3em;
+  animation: pop 1s ease-in-out infinite;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+/* Smiley message animation */
+.smileMsg {
+  font-size: 1.5em;
+  animation: smileBounce 2s infinite;
+}
+
+@keyframes smileBounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Floating hearts animation */
+.floatHeart {
+  position: absolute;
+  font-size: 2em;
+  animation: floatUp 4s infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 0.8; }
+  50% { transform: translateY(-80px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.8; }
+}
+
+/* Confetti animation */
+.confetti {
+  font-size: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-500px); }
+}
+/* ----------------- Welcome Page ----------------- */
+.welcome {
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+  background-size: 400% 400%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+.typing {
+  font-size: 2em;
+  max-width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+
+  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+  text-align: center;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+.glowBtn {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 25px;
+  background: gold;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 30px;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 10px gold; }
+  100% { box-shadow: 0 0 25px orange; }
+}
+
+.fireworks {
+  font-size: 3em;
+  margin-top: 20px;
+  animation: fireworksMove 2s infinite alternate;
+}
+
+@keyframes fireworksMove {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(20deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+/* Falling ribbons, chocolates, hearts etc. */
+.fall {
+  position: absolute;
+  top: -50px;
+  font-size: 2em;
+  animation: fallDown linear infinite;
+  opacity: 0.8;
+}
+
+.fall:nth-child(1) { animation-duration: 6s; animation-delay: 0s; }
+.fall:nth-child(2) { animation-duration: 5s; animation-delay: 0.5s; }
+.fall:nth-child(3) { animation-duration: 7s; animation-delay: 1s; }
+.fall:nth-child(4) { animation-duration: 6.5s; animation-delay: 1.5s; }
+.fall:nth-child(5) { animation-duration: 5.5s; animation-delay: 0.3s; }
+.fall:nth-child(6) { animation-duration: 6s; animation-delay: 0.7s; }
+.fall:nth-child(7) { animation-duration: 7s; animation-delay: 1.2s; }
+.fall:nth-child(8) { animation-duration: 6.3s; animation-delay: 1.1s; }
+.fall:nth-child(9) { animation-duration: 5.8s; animation-delay: 0.9s; }
+.fall:nth-child(10) { animation-duration: 6.7s; animation-delay: 1.3s; }
+
+@keyframes fallDown {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+  50% { transform: translateY(200px) rotate(180deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+/* ----------------- Name Page ----------------- */
+.namePage {
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+  background-size: 400% 400%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: gradientBG 12s ease infinite;
+  text-align: center;
+  overflow: hidden;
+}
+
+.helperText {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 0 0 10px #ffddc1;
+  animation: floatText 3s ease-in-out infinite;
+}
+
+@keyframes floatText {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+/* Input glowing animation */
+input {
+  padding: 12px 20px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  margin-top: 10px;
+  box-shadow: 0 0 5px #fff;
+  animation: inputGlow 2s infinite alternate;
+}
+
+@keyframes inputGlow {
+  0% { box-shadow: 0 0 5px #fff; }
+  50% { box-shadow: 0 0 20px #ffddc1; }
+  100% { box-shadow: 0 0 5px #fff; }
+}
+
+/* Button glow */
+.glowBtn {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 25px;
+  background: gold;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Falling elements reused from welcome page */
+/* Falling elements */
+.fall {
+  position: absolute;
+  top: -50px;
+  font-size: 1.8em;
+  animation: fallDown linear infinite;
+  opacity: 0.9;
+}
+
+/* Randomize duration and delay for more natural effect */
+.fall:nth-child(1) { animation-duration: 6s; animation-delay: 1s; }
+.fall:nth-child(2) { animation-duration: 5s; animation-delay: 2s; }
+.fall:nth-child(3) { animation-duration: 6s; animation-delay: 1s; }
+.fall:nth-child(4) { animation-duration: 5s; animation-delay: 2s; }
+.fall:nth-child(5) { animation-duration: 6s; animation-delay: 1s; }
+.fall:nth-child(6) { animation-duration: 5s; animation-delay: 2s; }
+.fall:nth-child(7) { animation-duration: 6s; animation-delay: 1s; }
+.fall:nth-child(8) { animation-duration: 5s; animation-delay: 2s; }
+.fall:nth-child(9) { animation-duration: 6s; animation-delay: 1s; }
+.fall:nth-child(10) { animation-duration: 5s; animation-delay: 2s; }
+.fall:nth-child(11) { animation-duration: 6s; animation-delay: 1s; }
+.fall:nth-child(12) { animation-duration: 5s; animation-delay: 2s; }
+.fall:nth-child(13) { animation-duration: 6s; animation-delay: 1s; }
+.fall:nth-child(14) { animation-duration: 5s; animation-delay: 2s; }
+.fall:nth-child(15) { animation-duration: 6s; animation-delay: 1s; }
+.fall:nth-child(16) { animation-duration: 5s; animation-delay: 2s; }
+.fall:nth-child(17) { animation-duration: 6s; animation-delay: 1s; }
+.fall:nth-child(18) { animation-duration: 5s; animation-delay: 2s; }
+.fall:nth-child(19) { animation-duration: 6s; animation-delay: 1s; }
+
+/* Animation for falling */
+@keyframes fallDown {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+  50% { transform: translateY(250px) rotate(180deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+/* ----------------- Wish Page ----------------- */
+.wishPage {
+  background: #F8C4FD; /* soft pastel background */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.wishContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.glow {
+  font-size: 3em;
+  text-align: center;
+
+  /* Bright rainbow gradient */
+  background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Subtle shadow to make it pop */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
+  margin-bottom: 40px;
+
+  /* Optional gentle glow animation */
+  animation: glowHeader 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowHeader {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
+  100% { filter: brightness(1); }
+}
+.glowBtn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  background: gold;
+  font-size: 20px;
+  cursor: pointer;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 10px gold; }
+  100% { box-shadow: 0 0 25px orange; }
+}
+
+/* Falling elements remain same as before */
+.fall {
+  position: absolute;
+  top: -50px;
+  font-size: 2em;
+  animation: fallDown linear infinite;
+  opacity: 0.9;
+}
+
+@keyframes fallDown {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+  50% { transform: translateY(250px) rotate(180deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+/* Typing effect only for header */
+.typingHeader {
+  border-right: .15em solid orange; /* only header has typing cursor */
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+}
+
+/* Wishes do NOT have the cursor */
+.wishText {
+  font-size: 1.8em;
+  margin: 15px 0;
+  text-align: center;
+  background: linear-gradient(90deg, #fbd786, #f7797d, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(0,0,0,0.2);
+  animation: floatText 2.5s ease-in-out infinite;
+}
+/* ---------------- Gift Page ---------------- */
+
+.giftPage {
+  min-height: 100vh;
+  background: #fff3f8;
+  text-align: center;
+  padding-top: 50px;
+  overflow: hidden;
+}
+
+.giftTitle {
+  font-size: 2.5em;
+  color: #ff4081;
+  margin-bottom: 40px;
+}
+
+/* Gift boxes */
+.giftContainer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.giftBox {
+  font-size: 4em;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  transition: transform 0.3s;
+}
+
+.giftBox:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Gift result */
+.giftResult {
+  margin-top: 40px;
+  font-size: 1.5em;
+  color: #333;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.giftResult.show {
+  opacity: 1;
+}
+
+.signature {
+  margin-top: 15px;
+  color: #ff4081;
+  font-weight: bold;
+}
+
+/* Falling elements (reuse) */
+.fall {
+  position: absolute;
+  top: -50px;
+  font-size: 2em;
+  animation: fallDown 6s linear infinite;
+}
+
+
+
+
+
