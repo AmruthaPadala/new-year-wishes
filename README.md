@@ -22,6 +22,6 @@ Built using **HTML, CSS, and JavaScript**. Perfect to share with friends and spr
 
 ---
 
-## 📂 Project Structure
+## 📂 Project Structure 
 
 
